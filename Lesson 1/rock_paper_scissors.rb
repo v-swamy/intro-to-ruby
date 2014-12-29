@@ -1,6 +1,19 @@
 
 puts "Play Rock/Paper/Scissors!"
 
+def result(user, computer)
+  result_array = [user, computer]
+  if user == computer
+    puts "It's a tie!"
+  elsif result_array.include?("r") && result_array.include?("p")
+    puts "Paper wraps Rock!"
+  elsif result_array.include?("r") && result_array.include?("s")
+    puts "Rock smashes Scissors!"
+  elsif result_array.include?("p") && result_array.include?("s")
+    puts "Scissors cuts Paper!"
+  end
+end
+
 begin
   choices = {"r" => "Rock", "p" => "Paper", "s" => "Scissors"}
 
@@ -11,20 +24,6 @@ begin
   computer_choice = choices.keys.sample
 
   puts "You picked #{choices[user_choice]} and computer picked #{choices[computer_choice]}."
-
-  
-  def result(user, computer)
-    result_array = [user, computer]
-    if user == computer
-      puts "It's a tie!"
-    elsif result_array.include?("r") && result_array.include?("p")
-      puts "Paper wraps Rock!"
-    elsif result_array.include?("r") && result_array.include?("s")
-      puts "Rock smashes Scissors!"
-    elsif result_array.include?("p") && result_array.include?("s")
-      puts "Scissors cuts Paper!"
-    end
-  end
 
   case 
   when user_choice == computer_choice
