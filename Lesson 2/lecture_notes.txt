@@ -1,0 +1,29 @@
+
+#Github
+-  git add, git commit is on local repository
+-  origin is alias for github repo
+-  don't nest directories
+    +  Need to be peers
+    +  Can have folders though
+    +  Web development needs its own repo/folder
+
+#OOP
+##Classes and Objects
+-  Classes are cookie cutter, objects are the cookie
+-  Classes contain behaviors
+-  .new method is the initialize method
+-  have to use .self, otherwise Ruby thinks it's a local variable
+-  use the getter/setter to change the instance variable, don't change it directly
+    +  But setter method has to use the instance variable
+
+##Class variables and class methods
+-  Class variables use @@
+-  use self.method for class methods
+
+##Inheritance
+-  uses < operator to inherit from class
+-  can override superclass methods
+    +  method lookup chain
+-  :: for calling classes that are in modules
+-  for modules, reverse inclusion order - the last model included will be called first
+-   
