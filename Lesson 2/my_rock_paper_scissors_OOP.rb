@@ -1,4 +1,3 @@
-
 CHOICES = ['Rock', 'Paper', 'Scissors']
 
 class Player
@@ -80,14 +79,15 @@ class RockPaperScissors
     end
   end
 
-  def continue?
+  def ask_to_continue
     puts "Would you like to continue? (Y/N)"
     choice = gets.chomp.downcase
     if choice != 'y'
       system 'clear'
       puts "Thanks for playing!"
       self.continue = false
-    else system 'clear'
+    else 
+      system 'clear'
     end
   end
 
@@ -107,7 +107,7 @@ class RockPaperScissors
       self.print_choices(player, computer)
       self.give_result(player, computer)
       self.declare_winner(player, computer)
-      self.continue?
+      self.ask_to_continue
     end
   end
 end
